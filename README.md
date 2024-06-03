@@ -2,7 +2,7 @@
 
 This repository contains the source code for the Energy Monitoring VM application developed as part of the Capstone Project for CSD5002 - Virtualization Essentials during the Fall Semester of 2023-24 under the guidance of Dr. Hemraj S.L.
 
-**M.Pon Dinesh Kumar (Reg No: 20MEI10010)
+M.Pon Dinesh Kumar (Reg No: 20MEI10010)
 
 ## Running the Application
 
