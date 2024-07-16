@@ -1,15 +1,124 @@
-# Energy Monitoring VM CloudSim - VMWatt
+# 🌐 VMwatt: Energy Monitoring & Reporting for Virtual Machines (VMs) 🌐
 
-This repository contains the source code for the Energy Monitoring VM application developed as part of the Capstone Project for CSD5002 - Virtualization Essentials during the Fall Semester of 2023-24 under the guidance of Dr. Hemraj S.L.
+Welcome to the VMwatt project repository! This project aims to develop a comprehensive tool for monitoring and reporting energy consumption in virtualized environments, specifically targeting Virtual Machines (VMs).
 
-## M.Pon Dinesh Kumar (Reg No: 20MEI10010)
+## 📚 Table of Contents
+- [Problem Statement](#-problem-statement)
+- [Motivation](#-motivation)
+- [Objectives](#-objectives)
+- [Technology Stack](#️-technology-stack)
+- [How to Clone and Run](#️-how-to-clone-and-run)
+- [Project Structure](#-project-structure)
+- [Main Logic Explanation](#-main-logic-explanation)
+- [Code Explanation](#-code-explanation)
+- [Screenshots](#-screenshots)
 
-## Running the Application
+## 🧩 Problem Statement
+In the realm of energy monitoring and reporting, several critical challenges persist:
+- **Lack of Accurate Hardware-Level Monitoring**: Current systems often struggle to provide the necessary precision for individual VMs.
+- **Limitations of Guest Operating Systems**: Aggregating and reporting energy usage across the entire VM is complex.
+- **Unifying Energy Monitoring and Reporting Solution**: Developing a unified solution capable of providing detailed insights into energy consumption.
 
-To run the application, follow these steps:
+## 💡 Motivation
+My motivation stems from the pressing demand to enhance resource efficiency, reduce operational costs, and embrace environmental sustainability in data centers and cloud environments. I aim to create a versatile and precise tool that empowers organizations to make well-informed decisions regarding their energy consumption.
 
-1. Clone this repository to your local machine
-2. run the following cmd
-**.\mvnw.cmd clean install** and 
-**.\mvnw javafx:run**
+## 🎯 Objectives
+The primary objectives of this project are:
+- **Precise Power Consumption Calculation**: Develop a computational engine that accurately calculates the power consumption of both the host server and individual guest VMs.
+- **Intuitive GUI Interface**: Create a user-friendly graphical interface for easy input of initialization details for the host and guest VMs.
+- **Real-Time Meter Visualizations**: Implement a graphical representation module that provides real-time visual displays of power consumption.
 
+## 🛠️ Technology Stack
+- **CloudSim Plus**: Java 17 simulation framework for Cloud computing modeling.
+- **Medusa**: Gauge library for JavaFX to create visually appealing and interactive gauges and displays.
+- **OpenJFX (JavaFX)**: Framework for building rich client applications using Java.
+- **Maven**: Project management and build automation tool.
+
+## 🖥️ How to Clone and Run
+Clone the repository:
+```sh
+git clone https://github.com/yourusername/vmwatt.git
+cd vmwatt
+mvn install
+mvn javafx:run
+```
+
+## 📁 Project Structure
+```
+vmwatt/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   └── yourpackage/
+│   │   │   │       ├── Main.java
+│   │   │   │       ├── controllers/
+│   │   │   │       ├── models/
+│   │   │   │       └── views/
+│   │   ├── resources/
+│   │   │   └── fxml/
+│   └── test/
+├── pom.xml
+└── README.md
+```
+
+## 🧠 Main Logic Explanation
+The application uses CloudSim Plus for simulation purposes. The main components of CloudSim Plus are:
+- **Datacentre**: Represents a location of cloud infrastructure with its VMs and hosts.
+- **Hosts**: Physical machines or servers in the datacentre that run multiple VMs.
+- **Virtual Machines (VMs)**: Virtualized computing instances that run on hosts.
+- **Cloudlets**: User-defined tasks executed in a cloud environment.
+- **Brokers**: Intermediaries between the cloud user and the datacentre.
+
+## 💻 Code Explanation
+**Main.java**
+```java
+package com.yourpackage;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        // Load the main FXML file and set the scene
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+```
+
+**SimulationController.java**
+```java
+package com.yourpackage.controllers;
+
+import org.cloudbus.cloudsim.cloudlets.Cloudlet;
+import org.cloudbus.cloudsim.vms.Vm;
+
+public class SimulationController {
+    public void runSimulation() {
+        // Setup and run the CloudSim Plus simulation
+    }
+}
+```
+
+## 🚀 Future Improvements
+- **Enhanced Data Visualization**: Integrate more advanced data visualization tools for better insights.
+- **Machine Learning Integration**: Use machine learning algorithms for predictive analysis of energy consumption.
+- **Cloud Integration**: Extend the tool to support cloud providers like AWS, Azure, and GCP.
+
+## 📸 Screenshots
+**Caption: Screenshot of the main dashboard.**
+
+![Main Dashboard](path/to/main/dashboard/screenshot.png)
+
+**Caption: Screenshot showing simulation results.**
+
+![Simulation Results](path/to/simulation/results/screenshot.png)
+
+Feel free to contribute to this project by forking the repository and creating pull requests. For any issues, please open an issue in the repository. Happy coding! 🚀
+
+This project is developed as a solo effort to enhance energy monitoring and reporting capabilities in virtualized environments.
