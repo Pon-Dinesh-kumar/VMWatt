@@ -1,5 +1,7 @@
 # 🌐 VMwatt: Energy Monitoring & Reporting for Virtual Machines (VMs) 🌐
 
+ <img src="https://github.com/Pon-Dinesh-kumar/VMWatt/blob/main/SS.png">
+
 Welcome to the VMwatt project repository! This project aims to develop a comprehensive tool for monitoring and reporting energy consumption in virtualized environments, specifically targeting Virtual Machines (VMs).
 
 ## 📚 Table of Contents
@@ -10,8 +12,7 @@ Welcome to the VMwatt project repository! This project aims to develop a compreh
 - [How to Clone and Run](#️-how-to-clone-and-run)
 - [Project Structure](#-project-structure)
 - [Main Logic Explanation](#-main-logic-explanation)
-- [Code Explanation](#-code-explanation)
-- [Screenshots](#-screenshots)
+
 
 ## 🧩 Problem Statement
 In the realm of energy monitoring and reporting, several critical challenges persist:
@@ -39,8 +40,8 @@ Clone the repository:
 ```sh
 git clone https://github.com/yourusername/vmwatt.git
 cd vmwatt
-mvn install
-mvn javafx:run
+.\mvnw.cmd clean install
+.\mvnw javafx:run
 ```
 
 ## 📁 Project Structure
@@ -71,54 +72,11 @@ The application uses CloudSim Plus for simulation purposes. The main components 
 - **Cloudlets**: User-defined tasks executed in a cloud environment.
 - **Brokers**: Intermediaries between the cloud user and the datacentre.
 
-## 💻 Code Explanation
-**Main.java**
-```java
-package com.yourpackage;
-
-import javafx.application.Application;
-import javafx.stage.Stage;
-
-public class Main extends Application {
-    @Override
-    public void start(Stage primaryStage) {
-        // Load the main FXML file and set the scene
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-}
-```
-
-**SimulationController.java**
-```java
-package com.yourpackage.controllers;
-
-import org.cloudbus.cloudsim.cloudlets.Cloudlet;
-import org.cloudbus.cloudsim.vms.Vm;
-
-public class SimulationController {
-    public void runSimulation() {
-        // Setup and run the CloudSim Plus simulation
-    }
-}
-```
 
 ## 🚀 Future Improvements
 - **Enhanced Data Visualization**: Integrate more advanced data visualization tools for better insights.
 - **Machine Learning Integration**: Use machine learning algorithms for predictive analysis of energy consumption.
 - **Cloud Integration**: Extend the tool to support cloud providers like AWS, Azure, and GCP.
 
-## 📸 Screenshots
-**Caption: Screenshot of the main dashboard.**
-
-![Main Dashboard](path/to/main/dashboard/screenshot.png)
-
-**Caption: Screenshot showing simulation results.**
-
-![Simulation Results](path/to/simulation/results/screenshot.png)
 
 Feel free to contribute to this project by forking the repository and creating pull requests. For any issues, please open an issue in the repository. Happy coding! 🚀
-
-This project is developed as a solo effort to enhance energy monitoring and reporting capabilities in virtualized environments.
